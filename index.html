@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", interactive-widget="resizes-content">
+    <title>To-Do, Today?</title>
+    <script src="https://kit.fontawesome.com/d6f188c942.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jost&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
+  <body>
+    <div id="overallWrapper">
+      <div id="backgroundCoverStuff">
+      </div>
+      <div id="notBackgroundCover">
+        <div id="header">
+          <div id="headerIconHolder">
+            <div id="toggleHolder">
+              <div id="toggledOff">
+                <i class="fa-solid fa-toggle-off"></i>
+                <h3>Light</h3>
+              </div>
+              <div id="toggledOn">
+                <i class="fa-solid fa-toggle-on"></i>
+                <h3>Dark</h3>
+              </div>
+              <div id="darkCount">1</div>
+            </div>
+          </div>
+        </div>
+        <div id="sidebarNamesOnly">
+          <div id="stopAllEmpty">
+            <h2 class="title">My Lists</h2>
+            <button id="seeAllToggle" type="button">See All To-Do's</button>
+          </div>
+        </div>
+        <div id="content">
+          <div id="allTasksBox"></div>
+          <div id="mainFormHolder">
+            <div id="buttonHolder">
+              <button id="addnew">New To-Do <i class="fa-solid fa-file-circle-plus"></i></button>
+              <button id="newproj_button">New Project <i class="fa-solid fa-folder-plus"></i></button>
+            </div>
+              <div class="form-box" id="todoFormContainer">
+                <form action="#" method="get" id="addnewform">
+                    <div>
+                        <label for="title">Title</label><br>
+                        <input type="text" id="title" name="Title" placeholder="Groceries" required >
+                    </div>
+                    <div>
+                        <label for="description">Description</label><br>
+                        <textarea type="text" id="description" name="Description" placeholder="Rice, salmon, fish..." cols="40" rows="4" style="resize: none;" required ></textarea>
+                    </div>
+                    <div>
+                      <label for="dueDate">Due Date</label><br>
+                      <input type="date" id="dueDate" name="DueDate" >
+                    </div>
+                    <div>
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="Priority" >
+                          <option value="High">High</option>
+                          <option value="Medium">Medium</option>
+                          <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div>
+                      <label for="notes">Extra Notes</label><br>
+                      <input type="text" id="notes" name="Notes" placeholder="Make sure to buy low-sodium!" >
+                    </div>
+                    <button type="button" id="submit_button">Add To-Do</button>
+                    <button type="button" id="cancel_button">Cancel</button>
+                </form>
+              </div>
+  
+              <div class="form-box" id="editFormContainer">
+                <form action="#" method="get" id="editForm">
+                    <div>
+                        <label for="editTitle">Title</label><br>
+                        <input type="text" id="editTitle" name="title.Edit" placeholder="Change your title" required >
+                    </div>
+                    <div>
+                        <label for="editDescription">Description</label><br>
+                        <textarea type="text" id="editDescription" name="description.Edit" placeholder="Change the current description!" cols="40" rows="4" style="resize: none;" required ></textarea>
+                    </div>
+                    <div>
+                      <label for="editDueDate">New Due Date</label><br>
+                      <input type="date" id="editDueDate" name="dueDate.Edit" >
+                    </div>
+                    <div>
+                        <label for="editPriority">Priority</label>
+                        <select id="editPriority" name="priority.Edit" >
+                          <option value="High">High</option>
+                          <option value="Medium">Medium</option>
+                          <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div>
+                      <label for="editNotes">New Notes</label><br>
+                      <input type="text" id="editNotes" name="notes.Edit" placeholder="Insert new notes here!" >
+                    </div>
+                    <button type="button" id="updateEditButton">Update Task</button>
+                    <button type="button" id="cancelEditButton">Cancel</button>
+                </form>
+              </div>
+  
+              <div class="form-box" id="projFormContainer">
+                <form action="#" method="get" id="addnewprojform">
+                    <div>
+                      <label for="newproj_name">New Project Name</label><br>
+                      <input type="text" id="newproj_name" name="Project Name" placeholder="Work-related" required >
+                    </div>
+                    <button type="button" id="newproj_add">Add Project</button>
+                    <button type="button" id="newproj_cancel">Cancel</button>
+                </form>
+              </div>
+          </div>
+          <div id="sidebar"></div>
+        </div>
+        <footer></footer> 
+      </div>
+    </div>
+  </body>
+</html>
